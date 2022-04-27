@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nutrition/config/config.dart';
 
+import 'widget/daily-summary.dart';
+
 class HomeBody extends StatelessWidget {
 
   HomeBody({
@@ -14,6 +16,14 @@ class HomeBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _appBar,
+      body: Container(
+        margin: EdgeInsets.only(right: 15. w, left: 15. w),
+        child: ListView(
+          children: const [
+            DailySummary()
+          ],
+        ),
+      ),
     );
   }
 
@@ -31,7 +41,7 @@ class HomeBody extends StatelessWidget {
             width: 45. w,
             margin: EdgeInsets.only(right: 15. w),
             decoration: BoxDecoration(
-              color: AppColors.colorTint300,
+              color: AppColors.colorTint200,
               borderRadius: BorderRadius.circular(15)
             ),
             child: Center(
@@ -56,7 +66,8 @@ class HomeBody extends StatelessWidget {
             'Today',
             style: TextStyle(
               color: AppColors.colorTint500,
-              fontSize: 14. sp
+              fontSize: 14. sp,
+              fontWeight: FontWeight.bold
             ),
           ),
           SizedBox(height: 7. w),
