@@ -5,6 +5,7 @@ import 'package:nutrition/config/config.dart';
 
 import 'widget/daily-calorie-statistics.dart';
 import 'widget/daily-summary.dart';
+import 'widget/meal-consumed.dart';
 
 class HomeBody extends StatelessWidget {
 
@@ -22,7 +23,8 @@ class HomeBody extends StatelessWidget {
         child: ListView(
           children: const [
             DailySummary(),
-            DailyCalorieStatistics()
+            DailyCalorieStatistics(),
+            MealConsumed()
           ],
         ),
       ),
