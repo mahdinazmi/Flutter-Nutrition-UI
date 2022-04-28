@@ -99,6 +99,7 @@ class DailySummary extends StatelessWidget {
       ),
     );
   }
+
   Widget _macronutrients() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,6 +140,7 @@ class DailySummary extends StatelessWidget {
             progressColor: Colors.white,
             padding: EdgeInsets.zero,
             backgroundColor: AppColors.colorTint100.withOpacity(0.2),
+            
           ),
           Text(
             amountInGram!,

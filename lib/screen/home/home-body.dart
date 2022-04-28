@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nutrition/config/config.dart';
 
+import 'widget/daily-calorie-statistics.dart';
 import 'widget/daily-summary.dart';
 
 class HomeBody extends StatelessWidget {
@@ -20,7 +21,8 @@ class HomeBody extends StatelessWidget {
         margin: EdgeInsets.only(right: 15. w, left: 15. w),
         child: ListView(
           children: const [
-            DailySummary()
+            DailySummary(),
+            DailyCalorieStatistics()
           ],
         ),
       ),
