@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nutrition/config/config.dart';
 import 'package:nutrition/model/model.dart';
@@ -108,7 +109,7 @@ class _MealConsumedState extends State < MealConsumed > {
                           height: 54. w,
                           width: 54. w,
                           decoration: BoxDecoration(
-                            color: AppColors.colorTint300,
+                            color: consumedFoods[index].boxColor,
                             borderRadius: BorderRadius.circular(20)
                           ),
                           child: Center(
@@ -157,20 +158,24 @@ class _MealConsumedState extends State < MealConsumed > {
       FoodConsumed(
         foodName: 'Espresso coffe',
         consumedAmount: '30 ml',
-        icon: FaIcon(
-          FontAwesomeIcons.glassWater,
-          color: Colors.red,
+        boxColor: AppColors.colorTint200,
+        icon: SvgPicture.asset(
+          'assets/icons/tea.svg',
+          width: 25. w,
+          height: 25. w
         ),
       )
     );
 
     consumedFoods.add(
       FoodConsumed(
-        foodName: 'Crollssant',
+        foodName: 'Croissant',
         consumedAmount: '100 ml',
-        icon: FaIcon(
-          FontAwesomeIcons.glassWater,
-          color: Colors.red,
+         boxColor: AppColors.colorErrorLight,
+        icon:SvgPicture.asset(
+          'assets/icons/croissant.svg',
+          width: 25. w,
+          height: 25. w
         ),
       )
     );

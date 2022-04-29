@@ -26,7 +26,7 @@ class _NavState extends State < Nav > {
       _currentIndex = index;
     });
   }
-  final pages = [const HomeScreen(), Container(), Container(), Container(), Container()];
+  final pages = [HomeScreen(), Container(), Container(), Container(), Container()];
 
   @override
   Widget build(BuildContext context) {

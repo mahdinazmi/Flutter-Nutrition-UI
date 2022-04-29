@@ -1,8 +1,8 @@
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:flutter/material.dart';
 class FoodConsumed {
   final String ? foodName;
   final String ? consumedAmount;
-  final FaIcon ? icon;
-  FoodConsumed({this.foodName, this.consumedAmount, this.icon});
+  final Widget ? icon;
+  final Color ? boxColor;
+  FoodConsumed({this.foodName, this.consumedAmount, this.icon, this.boxColor});
 }
