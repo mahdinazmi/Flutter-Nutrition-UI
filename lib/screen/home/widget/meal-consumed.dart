@@ -65,7 +65,7 @@ class _MealConsumedState extends State < MealConsumed > {
                       Text(
                         '407',
                         style: TextStyle(
-                          color: AppColors.colorTint600,
+                          color: AppColors.colorTint500,
                           fontWeight: FontWeight.bold,
                           fontSize: 16. sp,
                         ),
@@ -75,7 +75,8 @@ class _MealConsumedState extends State < MealConsumed > {
                         'kcal',
                         style: TextStyle(
                           color: AppColors.colorTint500,
-                          fontSize: 14. sp,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12. sp,
                         ),
                       ),
                     ],

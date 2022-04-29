@@ -23,6 +23,7 @@ dependencies:
   flutter_screenutil: ^5.0.1
   #icon
   font_awesome_flutter: 10.1.0
+  dot_navigation_bar: ^1.0.1+4
 
 dev_dependencies:
   flutter_test:
