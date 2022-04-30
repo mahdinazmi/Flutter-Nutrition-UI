@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrition/config/config.dart';
+import 'package:nutrition/screen/screen.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class DailySummary extends StatelessWidget {
@@ -10,22 +11,27 @@ class DailySummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.6,
-      child: Container(
-        padding: EdgeInsets.all(18. w),
-        decoration: BoxDecoration(
-          color: AppColors.colorPrimary,
-          borderRadius: BorderRadius.circular(30),
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            _circleProgress(),
-            _macronutrients()
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context, DailySummaryDetailScreen.routeName);
+      },
+      child: AspectRatio(
+        aspectRatio: 1.6,
+        child: Container(
+          padding: EdgeInsets.all(18. w),
+          decoration: BoxDecoration(
+            color: AppColors.colorPrimary,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _circleProgress(),
+              _macronutrients()
 
-          ],
+            ],
+          ),
         ),
       ),
     );
