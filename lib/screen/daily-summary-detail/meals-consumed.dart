@@ -33,7 +33,7 @@ class _MealsConsumedState extends State < MealsConsumed > {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.zero,
+      padding: EdgeInsets.only(bottom:15.w),
       itemBuilder: (BuildContext context, int index) {
         return mealConsumedTile(mealsConsumed[index]);
       }

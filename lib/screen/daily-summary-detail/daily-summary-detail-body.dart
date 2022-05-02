@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrition/config/config.dart';
 import 'appbar.dart';
 import 'meals-consumed.dart';
+import 'remaining-calorie.dart';
 
 class DailySummaryDetailBody extends StatefulWidget {
   const DailySummaryDetailBody({
@@ -25,7 +26,8 @@ class _DailySummaryDetailBodyState extends State < DailySummaryDetailBody > {
           children: [
             DailySummaryDetailScreenAppBarnAppBar(),
             _date(),
-            MealsConsumed()
+            MealsConsumed(),
+            RemainingCalorie(),
           ],
         ),
       ),
