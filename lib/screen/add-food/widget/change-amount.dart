@@ -19,9 +19,9 @@ class _ChangeAmountState extends State < ChangeAmount > {
   Widget build(BuildContext context) {
     return Container(
       height: 55. w,
-      margin: EdgeInsets.only(top: 20. w, bottom: 20. w, left: 10. w, right: 10. w),
-      //color: Colors.green,
+      margin: EdgeInsets.only(top: 30. w, left: 20. w, right: 20. w),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             height: 55. w,
@@ -90,6 +90,24 @@ class _ChangeAmountState extends State < ChangeAmount > {
                   ),
                 ),
               ],
+            ),
+          ),
+          Container(
+            height: 55. w,
+            width: 140. w,
+            padding: EdgeInsets.all(7),
+            decoration: BoxDecoration(
+              color: AppColors.colorPrimary,
+              borderRadius: BorderRadius.circular(20)
+            ),
+            child: Center(
+              child: Text(
+                'Apply',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.sp
+                ),
+              ),
             ),
           )
         ],
