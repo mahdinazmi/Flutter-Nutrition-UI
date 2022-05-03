@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrition/config/config.dart';
-import 'appbar.dart';
-import 'meals-consumed.dart';
-import 'remaining-calorie.dart';
+import 'widget/appbar.dart';
+import 'widget/date.dart';
+import 'widget/meals-consumed.dart';
+import 'widget/remaining-calorie.dart';
 
 class DailySummaryDetailBody extends StatefulWidget {
   const DailySummaryDetailBody({
@@ -23,42 +24,13 @@ class _DailySummaryDetailBodyState extends State < DailySummaryDetailBody > {
         margin: EdgeInsets.only(right: 15. w, left: 15. w),
         child: ListView(
           physics: BouncingScrollPhysics(),
-          children: [
-            DailySummaryDetailScreenAppBarnAppBar(),
-            _date(),
+          children: const [
+            DailySummaryDetailScreenAppBar(),
+            Date(),
             MealsConsumed(),
             RemainingCalorie(),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _date() {
-    return Container(
-      margin: EdgeInsets.only(top:10.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Today',
-            style: TextStyle(
-              color: AppColors.colorTint500,
-              fontSize: 14. sp,
-              fontWeight: FontWeight.bold
-            ),
-          ),
-          SizedBox(height: 7. w),
-          Text(
-            'Wed, 18 Aug',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 24. sp,
-              fontWeight: FontWeight.bold
-            ),
-          )
-        ]
       ),
     );
   }

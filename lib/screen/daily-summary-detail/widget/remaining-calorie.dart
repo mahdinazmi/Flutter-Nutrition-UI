@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrition/config/config.dart';
+import 'package:nutrition/screen/screen.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class RemainingCalorie extends StatelessWidget {
@@ -71,18 +72,23 @@ class RemainingCalorie extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: 60. w,
-            width: 60. w,
-            decoration: BoxDecoration(
-              color: AppColors.colorPrimary,
-              borderRadius: BorderRadius.circular(20)
+          GestureDetector(
+            onTap: (){
+              Navigator.popAndPushNamed(context, AddFoodScreen.routeName);
+            },
+            child: Container(
+              height: 60. w,
+              width: 60. w,
+              decoration: BoxDecoration(
+                color: AppColors.colorPrimary,
+                borderRadius: BorderRadius.circular(20)
+              ),
+              child: Icon(
+                Icons.add,
+                color: Colors.white,
+                size: 27. sp,
+              )
             ),
-            child: Icon(
-              Icons.add,
-              color: Colors.white,
-              size: 27. sp,
-            )
           )
         ],
       ),

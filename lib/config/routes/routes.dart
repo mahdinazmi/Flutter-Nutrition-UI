@@ -6,5 +6,6 @@ import 'package:nutrition/screen/screen.dart';
 final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   Nav.routeName : (context) => Nav(),
-  DailySummaryDetailScreen.routeName : (context) => DailySummaryDetailScreen()
+  DailySummaryDetailScreen.routeName : (context) => DailySummaryDetailScreen(),
+  AddFoodScreen.routeName : (context) => AddFoodScreen()
 };

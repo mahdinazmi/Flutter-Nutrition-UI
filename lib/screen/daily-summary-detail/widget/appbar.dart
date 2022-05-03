@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrition/config/config.dart';
 
-class DailySummaryDetailScreenAppBarnAppBar extends StatelessWidget {
-  const DailySummaryDetailScreenAppBarnAppBar({
+class DailySummaryDetailScreenAppBar extends StatelessWidget {
+  const DailySummaryDetailScreenAppBar({
     Key ? key
   }): super(key: key);
 
