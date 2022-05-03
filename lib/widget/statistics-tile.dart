@@ -4,7 +4,7 @@
   import 'package:flutter_screenutil/flutter_screenutil.dart';
   import 'package:percent_indicator/linear_percent_indicator.dart';
 
-  Widget statisticsTile({ Color ? progressColor, String ? title, FaIcon ? icon, double ? value, double ? progressPercent, }) {
+  Widget statisticsTile({ Color ? progressColor, String ? title, FaIcon ? icon, double ? value, double ? progressPercent, String ? unitName }) {
     return Expanded(
       child: Container(
         padding: EdgeInsets.all(20),
@@ -49,6 +49,7 @@
                 ),
                 SizedBox(width: 20. w),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       value.toString(),
@@ -60,7 +61,7 @@
                     ),
                     SizedBox(height: 5. w),
                     Text(
-                      'kcal',
+                      unitName ?? 'kcal',
                       style: TextStyle(
                         color: AppColors.colorTint600,
                         fontSize: 12. sp,
